@@ -1,9 +1,11 @@
+// use Model and Datatypes and require connection to sequelize
 const { Model, DataTypes } = require('sequelize');
-
 const sequelize = require('../config/connnection');
 
+// create the Category model
 class Category extends Model {}
 
+// creates the id and category name for the model
 Category.init(
   {
     id: {
@@ -17,7 +19,6 @@ Category.init(
       allowNull: false,
     },
   },
-
   {
     sequelize,
     timestamps: false,

@@ -14,19 +14,15 @@ Category.hasMany(Product, {
 });
 // Products belongToMany Tags (through ProductTag)
 Product.belongsToMany(Tag, {
-  through: {
-    model: 'product_tag',
+    through: ProductTag,
+    foreignKey: 'product_id',
     unique: false
-  },
-  as: 'lotta_product_tags'
 });
 // Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
-  through: {
-    model: 'product_tag',
+  through: ProductTag,
+    foreignKey: 'tag_id',
     unique: false
-  },
-  as: 'whole_lotta_product_tags'
 });
 
 module.exports = {

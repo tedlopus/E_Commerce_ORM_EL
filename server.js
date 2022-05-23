@@ -1,16 +1,21 @@
+// Import express and routes folder
 const express = require('express');
 const routes = require('./routes');
-// import sequelize connection
+// Import sequelize connection
+const sequelize = require('./config/connnection');
 
+// Set port number using env and creating app
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// boiler plate express
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Turn on routes
 app.use(routes);
 
-// sync sequelize models to the database, then turn on the server
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}!`);
+// Sync sequelize models to the database, then turn on the server
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log(`App listening on port http://localhost:${PORT}`));
 });
