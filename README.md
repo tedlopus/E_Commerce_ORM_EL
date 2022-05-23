@@ -37,3 +37,7 @@ Edward Lopus
 Please contact me at tedlopus, for any further questions you have regarding this project.
 
 Please visit https://github.com/tedlopus to see more of my projects!
+
+https://user-images.githubusercontent.com/95667498/169748080-8ac86349-ffe2-4893-9f1c-fefb749600cb.mp4
+
+https://user-images.githubusercontent.com/95667498/169748107-c2086d5d-1c1d-49dc-a2b9-bfbdb195af66.mp4
