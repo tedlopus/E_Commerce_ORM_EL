@@ -24,6 +24,7 @@ router.get('/:id', async (req, res) => {
     const categoryData = await Category.findByPk(req.params.id, {
       include: [ Product ],
     });
+    // if not categorydata then return a 404
     if(!categoryData) {
       res.status(404).json({ message: 'No category found with this id.' });
       return;
@@ -52,6 +53,7 @@ router.put('/:id', async (req, res) => {
         id: req.params.id
       }
     });
+    // if not categorydata then return a 404
     if(!categoryData) {
       res.status(404).json({ message: 'No category found with this id.' });
       return;
@@ -70,6 +72,7 @@ router.delete('/:id', async (req, res) => {
         id: req.params.id
       }
     });
+    // if not categorydata then return a 404
     if(!categoryData) {
       res.status(404).json({ message: 'No cateogry found with this id.' });
       return;
