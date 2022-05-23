@@ -26,7 +26,7 @@ You will need to use the following packages:
 You first must install the required packages using "npm install". Then you must connect to MySQL in the command line by using "mysql -u root -p" and then entering your password. Once you are in the MySQL shell you need to creat the schema by using the database we created with "USE ecommerce_db;" and the exit the MySQL shell by using "exit;". You must seed the database with "npm run seed" and start the server with "npm run start". After you have you completed all these steps within the server.js terminal, you can then test all approriate route names in insomnia!
 
 ## License
-This is project uses an MIT licensing.
+This project uses an MIT licensing.
 
 ## Credits
 
